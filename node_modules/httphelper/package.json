@@ -1,0 +1,15 @@
+{
+  "name": "httphelper",
+  "version": "0.1.0",
+  "descripion": "This helper provides the basic functionalities of a http server with url mapped to files, or mapped to javascript functions",
+  "author": {
+    "name": "Raphaël Marandet",
+    "email": "rapahel.marandet@gmail.com",
+    "url": "www.laboralphy.org"
+  },
+  "dependencies": {
+    "mime-types": "~2.0.4"
+  },
+  "main": "index",
+  "license": "MIT"
+}

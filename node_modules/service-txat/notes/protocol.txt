@@ -1,0 +1,42 @@
+PROTOCOLE TXAT
+
+
+CLIENT -> SERVEUR
+
+T_LOGIN
+ - u: user name
+ - p: password / or identifier (optional)
+
+
+HI: {u: user name}
+DN: {e: error string}
+LS: {c: list of channels}
+IM: {c: channel, m: info}
+ER: {e: error}
+CM: {u: user message, c: channel, m: message, d: extra data} // chat message
+UM: {u: user message, m: message, d: extra data} // user private message
+CA: {u: user message, c: channel}
+CD: {u: user message, c: channel}
+CL: {c: channel, u: list of users}
+IM: {c: channel, m: message}
+
+
+
+
+ID (u)
+SAY (c, m)
+JOIN (c)
+LEAVE (c)
+MSG (u, m)
+
+
+
+SERVEUR -> CLIENT
+
+HI (u)
+DN (e)
+
+CL (u, c)
+CA (u, c)
+CD (u, c)
+CM (u, c, m)

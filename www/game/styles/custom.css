@@ -1,0 +1,225 @@
+/* couleurs et typo */
+
+body {
+	background-color: #AAA;
+}
+
+.card {
+	margin-bottom: 1em;
+	padding: 0.5em 1em;
+	border-radius: 0.3em;
+	box-shadow: 0.1em 0.1em 0.4em rgba(0, 0, 0, 0.5);
+}
+
+dt {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+dt + dd + dt {
+	margin-top: 2em;
+}
+
+a.btn {
+	font-family: sans-serif;
+	background-color: #333;
+	color: #CCC;
+}
+
+a.btn:hover {
+	transition: all 0.5s;
+	background-color: #555;
+	color: #FFF;
+}
+
+a.btn.disabled {
+	opacity: 0.666;
+}
+
+.ph-heading {
+	background-image: url(../?action=square&s=banner);
+	background-position: left 2px top 2px;
+    background-repeat: no-repeat;	
+	text-align: center;
+}
+
+.card {
+	background-image: url(../?action=square&s=right);
+	background-position: right top;
+    background-repeat: no-repeat;	
+}
+
+h1 {
+	text-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+	text-shadow: 0.15em 0.15em 0.25em rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+	text-shadow: 0.10em 0.10em 0.20em rgba(0, 0, 0, 0.3);
+}
+
+hr {
+	line-height: 1px;
+	padding: 0px;
+}
+
+.popup {
+	position: absolute;
+	width: 640px;
+	height: 400px;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -200px;
+	background-color: #CCC;
+	border: solid 3px black;
+	padding: 16px;
+	box-shadow: 0 0 24px rgba(0, 0, 0, 0.7);
+}
+
+input[type="text"], input[type="number"] {
+	width: 100%;
+}
+
+
+.terminal {
+	background-color: #888;
+}
+
+.full-height {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/* KAODE VIEW */    /* KAODE VIEW */    /* KAODE VIEW */    /* KAODE VIEW */    
+/* KAODE VIEW */    /* KAODE VIEW */    /* KAODE VIEW */    /* KAODE VIEW */    
+/* KAODE VIEW */    /* KAODE VIEW */    /* KAODE VIEW */    /* KAODE VIEW */    
+
+
+
+div.progress-bar {
+	width: 100%;
+	height: 1.25em;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+}
+
+div.progress-bar > div:nth-child(1) {
+	height: 1.25em;
+	width: 100%;
+	position: absolute;
+	margin: 0;
+	border: outset 0.15em;
+}
+
+div.progress-bar > div:nth-child(2) {
+	height: 1.25em;
+	width: 100%;
+	position: absolute;
+	margin: 0;
+	font-size: 0.8em;
+	font-family: monospace;
+	color: white;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.7);
+}
+
+div.progress-bar.blue {
+	background-color: #007;
+}
+
+div.progress-bar.blue > div:nth-child(1) {
+	background-color: #00F;
+	border-color: #00F;
+}
+
+div.progress-bar.red {
+	background-color: #700;
+}
+
+div.progress-bar.red > div:nth-child(1) {
+	background-color: #F00;
+	border-color: #F00;
+}
+
+
+
+/* BATTLE SCREEN */
+/* BATTLE SCREEN */
+/* BATTLE SCREEN */
+
+
+@keyframes anim-creature-active {
+	from { 
+		background-color: #BBB; 
+	}
+	to { 
+		background-color: #DDD; 
+	}
+}
+
+section.tab.battle .commands,
+section.tab.battle .basic-commands {
+	font-size: 0.8em;
+}
+
+section.tab.battle .creature {
+	font-size: 0.85em;
+	border-radius: 0.5em;
+	border: solid thin black;
+}
+
+section.tab.battle .battle-state.t1 .creature {
+	background-color: #88C;
+}
+
+section.tab.battle .battle-state.t2 .creature {
+	background-color: #8C8;
+}
+
+section.tab.battle .creature.active {
+	animation-name: anim-creature-active;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+}
+
+section.tab.battle .creature.selectable {
+	border: solid 0.3em #3f33ff;
+	cursor: pointer;
+}
+
+section.tab.battle .creature.unselectable {
+	border: solid 0.3em #ff3333;
+	cursor: pointer;
+}
+
+section.tab.battle .battle-console {
+	width: 100%;
+	height: 16em;
+	background-color: #888;
+	border: solid thin black;
+	padding-left: 1em;
+	font-family: monospace;
+	font-size: 0.8em;
+	overflow: auto;
+}
+
+section.tab.battle .creature img.creature-portrait {
+	opacity: 0.3;
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+	width: initial;
+	height: initial;
+}
