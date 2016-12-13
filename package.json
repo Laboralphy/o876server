@@ -1,7 +1,7 @@
 {
-  "name": "object-loader",
+  "name": "o876-server",
   "version": "0.1.0",
-  "descripion": "This tool will load all classes in a given folder, and gather them into a single plain object",
+  "descripion": "A bundle for easily managing websocket and basic-http server ",
   "author": {
     "name": "Raphaël Marandet",
     "email": "rapahel.marandet@gmail.com",
