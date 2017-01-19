@@ -1,6 +1,6 @@
 O2.createClass('ApplicationAbstract', {
 
-	oClientSocket: null, // objet socket client de connexion
+	_oClientSocket: null, // objet socket client de connexion
 
 	/**
 	 * Toutes les methode commencant par "net_" doivent correspondre
@@ -12,14 +12,20 @@ O2.createClass('ApplicationAbstract', {
 		for (var sMeth in this) {
 			r = sMeth.match(/^net_([_a-z0-9]+)$/i);
 			if (r) {
-				this.oClientSocket.setSocketHandler(r[1], this[sMeth].bind(this));
+				this._oClientSocket.setSocketHandler(r[1], this[sMeth].bind(this));
 			}
 		}
 	},
 	
+	getSocket: function() {
+		if (!this._oClientSocket) {
+			this._oClientSocket = new WSC.ClientSocket();
+		}
+		return this._oClientSocket;
+	},
+	
 	_connectToServer: function() {
-		this.oClientSocket = new WSC.ClientSocketAbstract();
-		this.oClientSocket.connect();
+		this.getSocket().connect();
 		this._registerNetworkHandlers();
 	},
 	

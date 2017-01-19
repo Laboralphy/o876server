@@ -64,9 +64,6 @@ O2.extendClass('Application', ApplicationAbstract, {
 	 * Connection effective du client
 	 */
 	connectAction: function() {
-		if (this.oClientSocket) {
-			throw new Error('Déjà connecté.');
-		}
 		$form = $('form[name="form-login"]');
 		$login = $('input[name="login"]', $form);
 		$id = $('input[name="id"]', $form);
@@ -85,9 +82,9 @@ O2.extendClass('Application', ApplicationAbstract, {
 	 * Déconnexion du client
 	 */
 	disconnectAction: function() {
-		if (this.oClientSocket) {
-			this.oClientSocket.disconnect();
-			this.oClientSocket = null;
+		if (this.getSocket()) {
+			this.getSocket().disconnect();
+			this.getSocket() = null;
 			this.loadMenu('main-menu-0.html');
 			this.load('form-login.html', $app);
 		} else {
@@ -166,14 +163,14 @@ O2.extendClass('Application', ApplicationAbstract, {
 	 * Envoi d'une demande de login
 	 */
 	send_LOGIN: function(sUserName, sID) {
-		this.oClientSocket.send('LOGIN', {u: sUserName, p: sID});
+		this.getSocket().send('LOGIN', {u: sUserName, p: sID});
 	},
 
 	/**
 	 * Envoi d'un message de discussion au serveur
 	 */ 
 	send_T_SAY: function(sMessage) {
-		this.oClientSocket.send('T_SAY', {m: sMessage, c: this.sCurrentChannel});
+		this.getSocket().send('T_SAY', {m: sMessage, c: this.sCurrentChannel});
 	},
 	
 	
@@ -218,7 +215,7 @@ O2.extendClass('Application', ApplicationAbstract, {
 	 * Message de bienvenue du serveur : on est correctement identifié
 	 */
 	net_HI: function() {
-		this.oClientSocket.send('T_LIST');
+		this.getSocket().send('T_LIST');
 	},
 
 	/**

@@ -1,0 +1,17 @@
+-------------------------------------------------
+jeudi 19 janvier 2017, 13:36:04 (UTC+0100)
+/home/ralphy/public_html/o876server/node_modules/service-txat/System.js:26
+		this.initPlugins(Plugins, oConfig.plugins);
+		                 ^
+
+ReferenceError: Plugins is not defined
+    at TxatSystem.configure (/home/ralphy/public_html/o876server/node_modules/service-txat/System.js:26:20)
+    at Object.txatInit [as init] (/home/ralphy/public_html/o876server/node_modules/service-txat/index.js:31:8)
+    at main (/home/ralphy/public_html/o876server/index.js:53:14)
+    at Object.<anonymous> (/home/ralphy/public_html/o876server/index.js:92:1)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)
+    at Function.Module._load (module.js:438:3)
+    at Module.runMain (module.js:604:10)
