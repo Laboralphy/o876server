@@ -1,11 +1,9 @@
 var fs = require('fs');
 var httpHelper = require('httphelper');
 var wsHelper = require('wshelper');
-var Emitter = require('events');
 var CONFIG;
 
 
-var oEmitter = new Emitter();
 
 function readConfig() {
 	var oConfig = {};
@@ -51,9 +49,6 @@ function main() {
 			}
 			if ('init' in oService) {
 				oService.init(c[s]);
-			}
-			if ('emitter' in oService) {
-				oService.emitter(oEmitter);
 			}
 			aServices.push(oService);
 		}

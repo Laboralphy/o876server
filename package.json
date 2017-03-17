@@ -1,14 +1,16 @@
 {
-  "name": "o876-server",
-  "version": "0.1.0",
-  "descripion": "A bundle for easily managing websocket and basic-http server ",
-  "author": {
-    "name": "Raphaël Marandet",
-    "email": "rapahel.marandet@gmail.com",
-    "url": "http://www.laboralphy.org"
-  },
-  "dependencies": {},
-  "private": true,
-  "main": "index",
-  "license": "MIT"
+	"name": "o876-server",
+	"version": "0.1.0",
+	"descripion": "A bundle for easily managing websocket and basic-http server ",
+	"author": {
+		"name": "Raphaël Marandet",
+		"email": "rapahel.marandet@gmail.com",
+		"url": "http://www.laboralphy.org"
+	},
+	"dependencies": {
+		"socket.io": "1.4.8"
+	},
+	"private": true,
+	"main": "index",
+	"license": "MIT"
 }
