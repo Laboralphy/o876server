@@ -1,0 +1,65 @@
+channelCreated <Channel>
+création d'un nouveau canal
+ - Channel : instance du nouveau canal
+
+channelDestroyed <Channel>
+destruction d'un canal
+ - Channel : instance du canal
+
+userConnected <User>
+connexion d'un utilisateur au serveur
+ - User : instance de l'utilisateur nouvellement connecté
+
+userDisconnected <User>
+déconnexion d'un utilisateur
+ - User : instance de l'utilisateur qui se déconnecte
+
+userJoined <Channel> <User>
+un utilisateur rejoin un canal
+ - Channel : instance du canal en question
+ - User : isntance de l'utilisateur qui rejoint le canal
+
+userAccessDenied <Channel> <User>
+un utilisateur a tenté de rejoindre un canal mais n'a pas eu le droit d'y acceder
+ - Channel : instance du canal en question
+ - User : isntance de l'utilisateur qui a tenté de rejoindre le canal
+
+userLeft <Channel> <User>
+un utilisateur a quitté un canal
+ - Channel : instance du canal en question
+ - User : isntance de l'utilisateur qui quitté le canal
+
+newAdmin <Channel> <User>
+un utilisateur est promu administrateur du canal.
+ceci peut arriver lorsque le dernier utilisateur quitte le canal
+ - Channel : instance du canal concerné
+ - User : instance de l'utilisateur qui a été promu
+
+userBanned <Channel> <User1> <integer> <string> <User2>
+exclusion d'un utilisateur du canal auquel il était connecté.
+ - Channel : instance du canal concerné par le bannissmeent
+ - User1 : instance de l'utilisateur banni
+ - integer : durée du bannissement (en minutes)
+ - string : raison du bannissement
+ - User2 : instance de l'utilisateur qui a banni
+
+userPromote <Channel> <User>
+promotion d'un utilisateur.
+l'utilisateur gagne des droits uniquement concernant un certain canal.
+ - Channel : canal sur lequel se produit la promotion
+ - User : instance de l'utilisateur concerné par la promotion
+
+userDemote <Channel> <User>
+rétrogradation d'un utilisateur.
+l'utilisateur perd ses droits uniquement concernant un certain canal.
+ - Channel : canal sur lequel se produit la rétrogradation
+ - User : instance de l'utilisateur rétrogradé
+
+userList <User> <Channel> <Array>
+liste des utilisateurs connecté à un canal.
+ce message indique q'uil faut transmettre la liste des utilisateur du canal à un utilisateur particulier
+ - User : instance de l'utilisateur auquel envoyer la liste
+ - Channel : instance du canal concerné
+ - Array : liste des instances utilistateur qui sont connectés au canal
+
+message <MsgContext>
